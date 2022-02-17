@@ -1,0 +1,18 @@
+//
+// Created by Sumit Suman on 17/02/22.
+//
+// https://leetcode.com/problems/contains-duplicate/
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        
+        sort(nums.begin(), nums.end());
+        for(int i = 0; i < nums.size()-1; i++){
+            if(nums[i] == nums[i+1]) 
+                return true; 
+        }
+        return false;
+            
+    }
+};
